@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+        <main>
+        <h2>Entre em Contato</h2>
+        <p>Por favor, preencha o formulário abaixo para entrar em contato conosco.</p>
+        <form action="/api/processar_formulario.php" method="post">
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="campo_nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="campo_email" required>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="campo_telefone" placeholder="Digite seu telefone (opcional)">
+            </fieldset>
+            <fieldset>
+                <legend>Selecione o Tópico</legend>
+                <label for="assunto">Assunto:</label>
+                <select id="assunto" name="assunto">
+                    <option value="matricula">Matrícula</option>
+                    <option value="blackboard">Blackboard</option>
+                    <option value="portal">Portal do Aluno</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Deixe Sua Mensagem</legend>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" cols="50" required placeholder="Digite sua mensagem aqui"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Preferência de Contato</legend>
+                <input type="radio" id="contato_email" name="preferencia_contato" value="email" checked>
+                <label for="contato_email">Email</label>
+                <input type="radio" id="contato_telefone" name="preferencia_contato" value="telefone">
+                <label for="contato_telefone">Telefone</label>
+            </fieldset>
+            <fieldset>
+                <legend>Campus de preferência</legend>
+                <label for="onde_encontrou">Escolha o campus:</label>
+                <input type="text" id="onde_encontrou" name="onde_encontrou" list="campus" placeholder="Escolha ou digite...">
+                <datalist id="campus">
+                    <option value="Anália Franco"></option>
+                    <option value="Guarulhos"></option>
+                    <option value="Liberdade"></option>
+                    <option value="Paulista"></option>
+                    <option value="Santo Amaro"></option>
+                    <option value="São Miguel"></option>
+                    <option value="Villa-Lobos"></option>
+                </datalist>
+            </fieldset>
+            <fieldset>
+                <legend>Opções Adicionais</legend>
+                <input type="checkbox" id="newsletter" name="opcoes" value="newsletter">
+                <label for="newsletter">Eu aceito receber newsletters</label><br>
+                <input type="checkbox" id="promocoes" name="opcoes" value="promocoes">
+                <label for="promocoes">Eu aceito receber promoções por e-mail</label><br>
+                <input type="checkbox" id="novidades" name="opcoes" value="novidades">
+                <label for="novidades">Eu aceito receber novidades sobre eventos e cursos</label><br>                
+                <input type="checkbox" id="termos" name="opcoes" required>
+                <label for="termos">Eu aceito os termos e condições</label>
+            </fieldset>                
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>
