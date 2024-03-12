@@ -13,13 +13,13 @@
         // Verifica se os dados foram enviados via método POST
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Obtém os dados do formulário
-            $nome = $_POST["nome"];
-            $email = $_POST["email"];
-            $telefone = $_POST["telefone"];
-            $assunto = $_POST["assunto"];
-            $mensagem = $_POST["mensagem"];
-            $preferencia_contato = $_POST["preferencia_contato"];
-            $onde_encontrou = $_POST["onde_encontrou"];
+            $nome = $_POST["campo_nome"];
+            $email = $_POST["campo_email"];
+            $telefone = $_POST["campo_telefone"];
+            $assunto = $_POST["campo_assunto"];
+            $mensagem = $_POST["campo_mensagem"];
+            $preferencia_contato = $_POST["campo_pref_contato"];
+            $onde_encontrou = $_POST["campo_campus"];
             $opcoes = isset($_POST["opcoes"]) ? $_POST["opcoes"] : [];
 
             // Exibe os dados na página de resposta
