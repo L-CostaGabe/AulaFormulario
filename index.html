@@ -9,7 +9,7 @@
         <main>
         <h2>Entre em Contato</h2>
         <p>Por favor, preencha o formulário abaixo para entrar em contato conosco.</p>
-        <form action="/api/processar_formulario.php" method="post">
+        <form action="processar_formulario.php" method="post">
             <fieldset>
                 <legend>Informações Pessoais</legend>
                 <label for="nome">Nome:</label>
@@ -17,12 +17,12 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="campo_email" required>
                 <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="campo_telefone" placeholder="Digite seu telefone (opcional)">
+                <input type="tel" id="telefone" name="campo_telefone" required>
             </fieldset>
             <fieldset>
                 <legend>Selecione o Tópico</legend>
                 <label for="assunto">Assunto:</label>
-                <select id="assunto" name="assunto">
+                <select id="assunto" name="campo_assunto">
                     <option value="matricula">Matrícula</option>
                     <option value="blackboard">Blackboard</option>
                     <option value="portal">Portal do Aluno</option>
@@ -32,20 +32,20 @@
             <fieldset>
                 <legend>Deixe Sua Mensagem</legend>
                 <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="4" cols="50" required placeholder="Digite sua mensagem aqui"></textarea>
+                <textarea id="mensagem" name="campo_mensagem" rows="4" cols="50" placeholder="Digite sua mensagem aqui"></textarea>
             </fieldset>
             <fieldset>
                 <legend>Preferência de Contato</legend>
-                <input type="radio" id="contato_email" name="preferencia_contato" value="email" checked>
+                <input type="radio" id="contato_email" name="campo_pref_contato" value="email">
                 <label for="contato_email">Email</label>
-                <input type="radio" id="contato_telefone" name="preferencia_contato" value="telefone">
+                <input type="radio" id="contato_telefone" name="campo_pref_contato" value="telefone">
                 <label for="contato_telefone">Telefone</label>
             </fieldset>
             <fieldset>
                 <legend>Campus de preferência</legend>
-                <label for="onde_encontrou">Escolha o campus:</label>
-                <input type="text" id="onde_encontrou" name="onde_encontrou" list="campus" placeholder="Escolha ou digite...">
-                <datalist id="campus">
+                <label for="esc_campus">Escolha o campus:</label>
+                <input type="text" id="esc_campus" name="campo_campus" list="lista_campus" placeholder="Escolha ou digite...">
+                <datalist id="lista_campus">
                     <option value="Anália Franco"></option>
                     <option value="Guarulhos"></option>
                     <option value="Liberdade"></option>
