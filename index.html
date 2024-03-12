@@ -57,13 +57,13 @@
             </fieldset>
             <fieldset>
                 <legend>Opções Adicionais</legend>
-                <input type="checkbox" id="newsletter" name="opcoes" value="newsletter">
+                <input type="checkbox" id="newsletter" name="opcoes[]" value="newsletter">
                 <label for="newsletter">Eu aceito receber newsletters</label><br>
-                <input type="checkbox" id="promocoes" name="opcoes" value="promocoes">
+                <input type="checkbox" id="promocoes" name="opcoes[]" value="promocoes">
                 <label for="promocoes">Eu aceito receber promoções por e-mail</label><br>
-                <input type="checkbox" id="novidades" name="opcoes" value="novidades">
+                <input type="checkbox" id="novidades" name="opcoes[]" value="novidades">
                 <label for="novidades">Eu aceito receber novidades sobre eventos e cursos</label><br>                
-                <input type="checkbox" id="termos" name="opcoes" required>
+                <input type="checkbox" id="termos" name="opcoes[]" value="termos" required>
                 <label for="termos">Eu aceito os termos e condições</label>
             </fieldset>                
             <button type="submit">Enviar</button>
